@@ -76,6 +76,9 @@ font $font2
 default_border pixel 0
 default_floating_border pixel 0
 
+gaps inner 4
+gaps outer 3
+
 # Use mouse + mode to drage floating windows
 floating_modifier $mod
 
@@ -207,9 +210,9 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+#bar {
+#        status_command i3status
+#}
 
 
 # Startup Programs
@@ -217,6 +220,7 @@ bar {
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
