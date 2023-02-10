@@ -13,8 +13,9 @@ set $font2      pango:DejaVu Sans Mono 8
 
 set $terminal   i3-sensible-terminal
 set $browser    chromium
-#set $launcher   dmenu_run
-set $launcher rofi -show drun
+set $launcher   dmenu_run
+#set $launcher rofi -show drun
+#set $launcher rofi -i -show drun -modi drun -show-icons
 set $compositor picom
 
 set $up         k
